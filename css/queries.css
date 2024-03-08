@@ -1,0 +1,144 @@
+@media (max-width: 84em) {
+}
+
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+
+  .hero-img-container span {
+    height: 400px;
+    width: 400px;
+  }
+
+  .hero-img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 68em) {
+  .navigation-bar {
+    font-size: 2rem;
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 61em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+
+  .text-md {
+    font-size: 9rem;
+  }
+
+  .text-sm {
+    margin-left: 0.5rem;
+    font-size: 2.6rem;
+    letter-spacing: 2.5rem;
+  }
+
+  .text-extra-sm {
+    margin-left: 0.7rem;
+    font-size: 1.4rem;
+    letter-spacing: 1.8rem;
+  }
+}
+
+@media (max-width: 55em) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .header {
+    margin-bottom: 1rem;
+  }
+
+  .btn-mobile-nav {
+    z-index: 999;
+    display: block;
+  }
+  .navigation-bar {
+    background-color: rgba(219, 219, 219, 0.97);
+    /*-webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    pointer-events: none;
+    visibility: hidden;
+    transform: translateX(100%);
+  }
+
+  .nav-open .navigation-bar {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+    z-index: 2;
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .header-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .nav-btn,
+  .active {
+    font-size: 3rem;
+  }
+
+  @media (max-width: 28em) {
+    .hero-img-container span {
+      height: 300px;
+      width: 300px;
+    }
+
+    .hero-img {
+      height: 300px;
+    }
+
+    html {
+      /* 7px / 16px = 0.5 = 50% */
+      font-size: 43.75%;
+    }
+  }
+
+  @media (max-width: 23em) {
+    html {
+      font-size: 35%;
+    }
+
+    .hero-img-container span {
+      height: 250px;
+      width: 250px;
+    }
+
+    .hero-img {
+      height: 250px;
+    }
+  }
+}
